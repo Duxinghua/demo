@@ -9,6 +9,10 @@
 </template>
 
 <style lang="scss">
+@import "./src/assets/svg.scss";
+img{
+   content:'normal'!important;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,4 +33,21 @@
     }
   }
 }
+
+  p {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: pink;
+    border: 2px solid transparent;
+    border-image: svg(1px-border param(--color #000)) 1 stretch;
+  }
+  div {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto 0;
+    border: 2px solid transparent;
+    border-image: svg(1px-border2 param(--color blue)) 1 stretch;
+  }
 </style>
